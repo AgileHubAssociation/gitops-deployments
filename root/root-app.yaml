@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-root
+  name: test-root
 spec:
   destination:
     namespace: argocd
@@ -10,7 +10,7 @@ spec:
   source:
     path: applications
     repoURL: https://github.com/lcostea/gitops-deployments.git
-    targetRevision: dev
+    targetRevision: test
   syncPolicy:
     automated:
       prune: false

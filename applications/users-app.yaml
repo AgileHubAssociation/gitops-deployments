@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-capability-users
+  name: test-capability-users
 spec:
   destination:
     namespace: argocd
@@ -10,7 +10,7 @@ spec:
   source:
     path: services
     repoURL: https://github.com/lcostea/gitops-users-deployments.git
-    targetRevision: dev
+    targetRevision: test
   syncPolicy:
     automated:
       prune: false
